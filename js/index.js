@@ -21,7 +21,10 @@ function addSite() {
 
     localStorage.setItem("sites", JSON.stringify(sites));
     clearData();
+  }else{
+    showAlert()
   }
+
 }
 
 function displayData() {
@@ -93,3 +96,12 @@ document.addEventListener("keydown", function(e){
     addSite()
   }
 })
+
+
+function showAlert(){
+  document.getElementById("alert-validation").classList.remove("d-none")
+}
+
+function hideAlert(){
+  document.getElementById("alert-validation").classList.add("d-none")
+}

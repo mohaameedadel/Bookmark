@@ -16,7 +16,40 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <section class="main py-5 min-vh-100">
+    <section class="main py-5 min-vh-100 position-relative">
+      <div
+        onclick="hideAlert()"
+        id="alert-validation"
+        class="d-none alert-validation z-3 position-absolute top-0 end-0 w-100 h-100 d-flex justify-content-center align-items-center"
+      >
+        <div class="layer bg-white p-4 rounded">
+          <div class="icons mb-3">
+            <div class="circles">
+              <span class="circle me-2"></span>
+              <span class="circle me-2"></span>
+              <span class="circle"></span>
+            </div>
+            <div onclick="hideAlert()" class="x fs-3">
+              <a class="text-decoration-none text-black" href="#"
+                ><i class="fa-solid fa-xmark"></i
+              ></a>
+            </div>
+          </div>
+          <p class="alert-text fs-5 fw-semibold">
+            Site Name or Url is not valid, Please follow the rules below :
+          </p>
+          <ul>
+            <li class="mb-2">
+              <i class="fa-regular fa-circle-right"></i> Site name must contain
+              at least 3 characters
+            </li>
+            <li>
+              <i class="fa-regular fa-circle-right"></i> Site URL must be a
+              valid one
+            </li>
+          </ul>
+        </div>
+      </div>
       <div class="container">
         <h1 class="m-auto position-relative mb-5">Bookmarker</h1>
         <div class="inputs mt-5 text-center py-4 px-3">
