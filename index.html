@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <section class="main py-5 min-vh-100">
+      <div class="container">
+        <h1 class="m-auto position-relative mb-5">Bookmarker</h1>
+        <div class="inputs mt-5 text-center py-4 px-3">
+          <h2>
+            <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+
+          <div class="site-name text-start mt-4">
+            <label for="bookmarkName" class="pb-2 fw-semibold">
+              <i class="fa-solid fa-book-bookmark pe-2"></i>
+              Site Name</label
+            >
+            <input
+              oninput="validationData(this)"
+              type="text"
+              placeholder="Bookmark Name"
+              class="form-control input"
+              id="bookmarkName"
+            />
+          </div>
+
+          <div class="site-url text-start mt-3">
+            <label for="bookmarkURL" class="pb-2 fw-semibold">
+              <i class="fa-solid fa-link pe-2"></i>Site URL</label
+            >
+            <input
+              oninput="validationData(this)"
+              type="url"
+              placeholder="Website URL"
+              class="form-control input"
+              id="bookmarkURL"
+            />
+          </div>
+
+          <button
+            onclick="addSite()"
+            class="btn btn-submit mt-4 px-5"
+            id="submitBtn"
+          >
+            Submit
+          </button>
+        </div>
+
+        <div class="overflow-auto">
+          <table class="table mt-4 text-center bg-light">
+            <thead>
+              <tr>
+                <th class="text-capitalize">index</th>
+                <th class="text-capitalize">Website Name</th>
+                <th class="text-capitalize">Visit</th>
+                <th class="text-capitalize">Delete</th>
+              </tr>
+            </thead>
+            <tbody id="tableContent"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
