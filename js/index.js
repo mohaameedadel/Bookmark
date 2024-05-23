@@ -87,3 +87,9 @@ function validationData(element) {
     return false;
   }
 }
+
+document.addEventListener("keydown", function(e){
+  if(e.key == "Enter"){
+    addSite()
+  }
+})
