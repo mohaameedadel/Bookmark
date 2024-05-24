@@ -77,7 +77,7 @@ function validationData(element) {
 
   var regex = {
     bookmarkName: /^[a-zA-Z0-9]{3,}$/,
-    bookmarkURL: /^.{1,}\.(com|gov|edu)(\/)?(.{1,})?$/,
+    bookmarkURL: /^(https:|http:)\/\/(www.)?.{1,}\.(com|gov|edu)(\/)?(.{1,})?$/,
   };
 
   if (regex[element.id].test(inputValue)) {
